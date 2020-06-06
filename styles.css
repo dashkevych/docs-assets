@@ -146,7 +146,64 @@ html {
   color: #666668;
 }
 
+/* Sidebar */
+#sidebar .nav-list a {
+  font-size: 0.889rem;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+
+#sidebar h3 {
+  font-size: 0.889rem;
+  text-transform: none;
+  margin-bottom: 1rem;
+}
+
+#sidebar .nav-list li {
+  margin: 0;
+}
+
+#sidebar .nav-list li + li {
+  margin-top: 0.25em;
+  padding-top: 0.25em;
+  border-top: 1px dashed #e2e2e4;
+}
+
+#sidebar form .search-query {
+  font-size: 0.889rem;
+  height: 55px;
+  border-radius: 0;
+  padding: 1em;
+  line-height: 1.45;
+}
+
+/* Articles */
+.container-fluid,
+.contentWrapper {
+  position: static;
+}
+
+#main-content {
+  background: none; 
+}
+
+.contentWrapper::before {
+  content: "";
+  background-color: #f6f6f8;
+  position: absolute;
+  left: 0; top: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.contentWrapper {
+  border-color: #e2e2e4;
+}
+
 /* Credits */
-footer.center span {
+footer.center span,
+.row-fluid + footer > span {
   display: none;
 }
